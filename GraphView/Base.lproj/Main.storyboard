@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6GJ-ia-CfO">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DJ9-dW-uzy" customClass="JuGraphView">
+                                <rect key="frame" x="0.0" y="84" width="600" height="200"/>
+                                <color key="backgroundColor" red="0.91764705879999997" green="0.92156862750000001" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="q2a-xJ-ycY"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fwf-Fx-Aeu" customClass="JuGraphView">
+                                <rect key="frame" x="0.0" y="304" width="600" height="200"/>
+                                <color key="backgroundColor" red="0.91764705879999997" green="0.92156862750000001" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Zsu-Zl-m1N"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Fwf-Fx-Aeu" firstAttribute="top" secondItem="DJ9-dW-uzy" secondAttribute="bottom" constant="20" id="71Z-UH-fAK"/>
+                            <constraint firstItem="DJ9-dW-uzy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="BHH-Jg-dTw"/>
+                            <constraint firstItem="Fwf-Fx-Aeu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IMh-yB-hmS"/>
+                            <constraint firstAttribute="trailing" secondItem="Fwf-Fx-Aeu" secondAttribute="trailing" id="LMt-uz-o0U"/>
+                            <constraint firstAttribute="trailing" secondItem="DJ9-dW-uzy" secondAttribute="trailing" id="MgD-xO-EQb"/>
+                            <constraint firstItem="DJ9-dW-uzy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dMU-wA-5dk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HsE-l8-jms">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="E8u-pC-oBI">
+                            <connections>
+                                <segue destination="6M9-YF-aN3" kind="push" id="GQ7-tH-HOt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="graphView1" destination="DJ9-dW-uzy" id="yWu-xn-4oy"/>
+                        <outlet property="graphView2" destination="Fwf-Fx-Aeu" id="nfX-58-QrM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1200" y="372"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="wPT-3s-Pwc">
+            <objects>
+                <viewController id="6M9-YF-aN3" customClass="SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hIx-DB-hpq"/>
+                        <viewControllerLayoutGuide type="bottom" id="NOX-CJ-vy8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TGX-VA-vDm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gyg-Ru-DZK" customClass="JuHistogramView">
+                                <rect key="frame" x="0.0" y="136" width="600" height="220"/>
+                                <color key="backgroundColor" red="0.91764705879999997" green="0.92156862750000001" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="u00-sU-pTg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Gyg-Ru-DZK" secondAttribute="trailing" id="6Ce-hD-EdQ"/>
+                            <constraint firstItem="Gyg-Ru-DZK" firstAttribute="top" secondItem="hIx-DB-hpq" secondAttribute="bottom" constant="72" id="6lQ-3Y-Twn"/>
+                            <constraint firstItem="Gyg-Ru-DZK" firstAttribute="leading" secondItem="TGX-VA-vDm" secondAttribute="leading" id="hJ4-Wt-CvC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="16e-zN-aq0">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="Y5w-tq-GQS">
+                            <connections>
+                                <segue destination="bxh-zf-3HW" kind="push" id="hOp-Xr-uFc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="histogramView" destination="Gyg-Ru-DZK" id="aR1-CB-djm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j5G-HB-SRH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1915" y="347"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="r88-2U-4qb">
+            <objects>
+                <viewController id="bxh-zf-3HW" customClass="ThirdViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WKn-5G-gCp"/>
+                        <viewControllerLayoutGuide type="bottom" id="S1C-FX-jT8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EqS-qZ-yIj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62J-EA-HOf" customClass="JuBarGraphView">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="S1C-FX-jT8" firstAttribute="top" secondItem="62J-EA-HOf" secondAttribute="bottom" id="M6F-y2-PCB"/>
+                            <constraint firstItem="62J-EA-HOf" firstAttribute="top" secondItem="WKn-5G-gCp" secondAttribute="bottom" id="QpJ-xK-5gO"/>
+                            <constraint firstItem="62J-EA-HOf" firstAttribute="leading" secondItem="EqS-qZ-yIj" secondAttribute="leading" id="tPf-FD-6nE"/>
+                            <constraint firstAttribute="trailing" secondItem="62J-EA-HOf" secondAttribute="trailing" id="u7h-mk-NTy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kyt-sV-rgR"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="barGraphView" destination="62J-EA-HOf" id="iBg-k3-ZcQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hCp-PQ-2wj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2653" y="341"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="P5m-IH-Ck0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6GJ-ia-CfO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Eos-lb-c5B">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Qrs-7e-UcA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G9N-dk-xUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="449" y="-320"/>
+        </scene>
+    </scenes>
+</document>
